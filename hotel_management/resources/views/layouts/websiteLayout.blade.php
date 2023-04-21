@@ -12,19 +12,19 @@
     <link rel="stylesheet" type="text/css"
         href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
 
-    <link rel="stylesheet" href="{{asset("website_asset/css/bootstrap.min.css")}}">
-    <link rel="stylesheet" href="{{asset("website_asset/css/animate.css")}}">
-    <link rel="stylesheet" href="{{asset("website_asset/css/owl.carousel.min.css")}}">
-    <link rel="stylesheet" href="{{asset("website_asset/css/aos.css")}}">
-    <link rel="stylesheet" href="{{asset("website_asset/css/bootstrap-datepicker.css")}}">
-    <link rel="stylesheet" href="{{asset("website_asset/css/jquery.timepicker.css")}}">
-    <link rel="stylesheet" href="{{asset("website_asset/css/fancybox.min.css")}}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/jquery.timepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/fancybox.min.css') }}">
 
-    <link rel="stylesheet" href="{{asset("website_asset/fonts/ionicons/css/ionicons.min.css")}}">
-    <link rel="stylesheet" href="{{asset("website_asset/fonts/fontawesome/css/font-awesome.min.css")}}">
+    <link rel="stylesheet" href="{{ asset('website_asset/fonts/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('website_asset/fonts/fontawesome/css/font-awesome.min.css') }}">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="{{asset("website_asset/css/style.css")}}">
+    <link rel="stylesheet" href="{{ asset('website_asset/css/style.css') }}">
 </head>
 
 <body>
@@ -49,8 +49,8 @@
                                 <div class="row full-height align-items-center">
                                     <div class="col-md-6 mx-auto">
                                         <ul class="list-unstyled menu">
-                                            <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li class="active"><a href="{{route("Mainwebsite")}}">Home</a></li>
+                                            <li><a href="{{route("allroomspage")}}">Rooms</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="events.html">Events</a></li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -67,7 +67,9 @@
     </header>
     <!-- END head -->
 
-	<footer class="section footer-section">
+    @yield("content")
+
+    <footer class="section footer-section">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-md-3 mb-5">
@@ -88,13 +90,15 @@
                 </div>
                 <div class="col-md-3 mb-5 pr-md-5 contact-info">
                     <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-                    <p><span class="d-block"><span
-                                class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span> 198 West
+                    <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span>
+                        <span> 198 West
                             21th Street, <br> Suite 721 New York NY 10016</span></p>
                     <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span>
-                        <span> (+1) 435 3533</span></p>
+                        <span> (+1) 435 3533</span>
+                    </p>
                     <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span>
-                        <span> info@domain.com</span></p>
+                        <span> info@domain.com</span>
+                    </p>
                 </div>
                 <div class="col-md-3 mb-5">
                     <p>Sign up for our newsletter</p>
@@ -128,23 +132,24 @@
         </div>
     </footer>
 
-    <script src="{{asset("website_asset/js/jquery-3.3.1.min.js")}}"></script>
-    <script src="{{asset("website_asset/js/jquery-migrate-3.0.1.min.js")}}"></script>
-    <script src="{{asset("website_asset/js/popper.min.js")}}"></script>
-    <script src="{{asset("website_asset/js/bootstrap.min.js")}}"></script>
-    <script src="{{asset("website_asset/js/owl.carousel.min.js")}}"></script>
-    <script src="{{asset("website_asset/js/jquery.stellar.min.js")}}"></script>
-    <script src="{{asset("website_asset/js/jquery.fancybox.min.js")}}"></script>
+    <script src="{{ asset('website_asset/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('website_asset/js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ asset('website_asset/js/popper.min.js') }}"></script>
+    <script src="{{ asset('website_asset/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('website_asset/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('website_asset/js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('website_asset/js/jquery.fancybox.min.js') }}"></script>
 
 
-    <script src="{{asset("website_asset/js/aos.js")}}"></script>
+    <script src="{{ asset('website_asset/js/aos.js') }}"></script>
 
-    <script src="{{asset("website_asset/js/bootstrap-datepicker.js")}}"></script>
-    <script src="{{asset("website_asset/js/jquery.timepicker.min.js")}}"></script>
+    <script src="{{ asset('website_asset/js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('website_asset/js/jquery.timepicker.min.js') }}"></script>
 
 
 
-    <script src="{{asset("website_asset/js/main.js")}}"></script>
+    <script src="{{ asset('website_asset/js/main.js') }}"></script>
+    
 </body>
 
 </html>

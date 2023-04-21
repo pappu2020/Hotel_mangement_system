@@ -19,16 +19,18 @@ class roomsController extends Controller
 
 
     function roomInsert(Request $req){
-        // $req->validate([
+        $req->validate([
 
-        //     'name' => 'required|max:100',
-        //     'roomNum' => 'required',
-        //     'roomPrice' => 'required',
-        //     'description' => 'required|max:500',
-        //     // 'picture' => 'mimes:jpg,jpeg,png,gif,webp',
-        //     'picture' => 'required',
+            'name' => 'required|max:100',
+            'roomNum' => 'required',
+            'roomPrice' => 'required',
+            'description' => 'required|max:1000',
+            // 'picture' => 'mimes:jpg,jpeg,png,gif,webp',
+            'picture' => 'required',
 
-        // ]);
+        ],[
+            'description.max:1000'=>"Please, Write description between 1000 words."
+        ]);
 
 
         $getImage = $req->picture;
@@ -59,7 +61,7 @@ class roomsController extends Controller
         ]);
 
 
-        return back();
+        return back()->with("roomInsertSucess","Room insert Success");
     }
 }
 

@@ -68,6 +68,12 @@
                                             name="description"></textarea>
 
                                     </div>
+
+                                     @error("description")
+
+                                    <p class="mt-1 text-danger">{{$message}}</p>
+                                        
+                                    @enderror
                                 </div>
                             </div>
 
@@ -114,9 +120,9 @@
                             <div class="row mt-4">
                                 
                                 <div class="col-lg-4">
-                                    <img src="" alt="" width="200px" height="200px" class="d-block">
+                                    <img src="" alt="" width="200px" height="200px" class="d-block" id="roomImageView">
                                     <label for="picture" class="form-label mt-3">Add Picture</label>
-                                    <input type="file" name="picture" class="form-control">
+                                    <input type="file" name="picture" class="form-control" onchange="document.getElementById('roomImageView').src = window.URL.createObjectURL(this.files[0])">
                                      @error("picture")
 
                                     <p class="mt-1 text-danger">{{$message}}</p>

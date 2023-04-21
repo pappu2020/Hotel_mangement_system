@@ -30,6 +30,23 @@ Route::get('/', [websiteContoller::class, 'Mainwebsite'])->name('Mainwebsite');
 
 
 
+//website_section
+
+
+Route::get('allroomspage', [websiteContoller::class, 'allroomspage'])->name('allroomspage');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Hero section

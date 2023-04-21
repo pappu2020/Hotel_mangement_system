@@ -140,11 +140,11 @@
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <a href="#" class="room">
                     <figure class="img-wrap">
-                        <img width="399px" height="250px" src="{{asset("uploads/roomImg")}}/{{$Rooms->picture}}" alt="Free website template" class="img-fluid mb-3">
+                        <img width="399px" height="250px" src="{{asset("uploads/roomImg")}}/{{$Rooms->picture}}"  class="">
                     </figure>
                     <div class="p-3 text-center room-info">
                         <h2>{{$Rooms->name}}</h2>
-                        <span class="text-uppercase letter-spacing-1">{{$Rooms->roomPrice}} / per night</span>
+                        <span class="text-uppercase letter-spacing-1">{{$Rooms->roomPrice}}\- TK / per night</span>
                     </div>
                 </a>
             </div>
@@ -172,41 +172,18 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+                    
+                    
+                     @foreach ($allRoomsImg as $RoomsImg)
                     <div class="slider-item">
-                        <a href="images/slider-1.jpg" data-fancybox="images"
-                            data-caption="Caption for this image"><img src="images/slider-1.jpg"
+                        <a href="" data-fancybox="images"
+                            data-caption="Caption for this image"><img src="{{asset("uploads/roomImg")}}/{{$RoomsImg->picture}}"
                                 alt="Image placeholder" class="img-fluid"></a>
                     </div>
-                    <div class="slider-item">
-                        <a href="images/slider-2.jpg" data-fancybox="images"
-                            data-caption="Caption for this image"><img src="images/slider-2.jpg"
-                                alt="Image placeholder" class="img-fluid"></a>
-                    </div>
-                    <div class="slider-item">
-                        <a href="images/slider-3.jpg" data-fancybox="images"
-                            data-caption="Caption for this image"><img src="images/slider-3.jpg"
-                                alt="Image placeholder" class="img-fluid"></a>
-                    </div>
-                    <div class="slider-item">
-                        <a href="images/slider-4.jpg" data-fancybox="images"
-                            data-caption="Caption for this image"><img src="images/slider-4.jpg"
-                                alt="Image placeholder" class="img-fluid"></a>
-                    </div>
-                    <div class="slider-item">
-                        <a href="images/slider-5.jpg" data-fancybox="images"
-                            data-caption="Caption for this image"><img src="images/slider-5.jpg"
-                                alt="Image placeholder" class="img-fluid"></a>
-                    </div>
-                    <div class="slider-item">
-                        <a href="images/slider-6.jpg" data-fancybox="images"
-                            data-caption="Caption for this image"><img src="images/slider-6.jpg"
-                                alt="Image placeholder" class="img-fluid"></a>
-                    </div>
-                    <div class="slider-item">
-                        <a href="images/slider-7.jpg" data-fancybox="images"
-                            data-caption="Caption for this image"><img src="images/slider-7.jpg"
-                                alt="Image placeholder" class="img-fluid"></a>
-                    </div>
+
+                     @endforeach
+
+                  
                 </div>
                 <!-- END slider -->
             </div>
@@ -216,7 +193,7 @@
 </section>
 <!-- END section -->
 
-<section class="section bg-image overlay" style="background-image: url('images/hero_3.jpg');">
+<section class="section bg-image overlay" style="background-image: url('{{asset("website_asset/images/hero_3.jpg")}}');">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-md-7">

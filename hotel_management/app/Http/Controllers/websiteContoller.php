@@ -12,8 +12,21 @@ class websiteContoller extends Controller
 
         $allHeroSectionContent = heroSectionModel::latest()->get();
         $allRooms = roomsModel::take(3)->get();
+        $allRoomsImg = roomsModel::latest()->get();
         return view("website",[
             'allHeroSectionContent' => $allHeroSectionContent,
+            'allRooms' => $allRooms,
+            'allRoomsImg' => $allRoomsImg,
+        ]);
+    }
+
+
+
+
+
+    function allroomspage(){
+        $allRooms = roomsModel::latest()->get();
+        return view("website.allroomspage",[
             'allRooms' => $allRooms,
         ]);
     }
