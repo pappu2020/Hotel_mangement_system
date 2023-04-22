@@ -99,7 +99,7 @@
                     
                 
                 <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
-                    <a href="#" class="room">
+                    <a href="{{route("reservationpage",$Rooms->id)}}" class="room">
                         <figure class="img-wrap">
                             <img width="399px" height="250px" src="{{asset("uploads/roomImg")}}/{{$Rooms->picture}}" alt="Free website template" class="">
                         </figure>

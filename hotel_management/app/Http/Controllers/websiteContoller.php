@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\heroSectionModel;
 use App\Models\roomsModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
 
 class websiteContoller extends Controller
 {
@@ -25,9 +26,11 @@ class websiteContoller extends Controller
 
 
     function allroomspage(){
-        $allRooms = roomsModel::latest()->get();
+        $allRooms = roomsModel::where("status","Open")->get();
+        $RoomsPerson = roomsModel::get();
         return view("website.allroomspage",[
             'allRooms' => $allRooms,
+            'RoomsPerson' => $RoomsPerson,
         ]);
     }
 }

@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="{{ asset('dashboard_asset/css/demo_1/style.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('dashboard_asset/images/favicon.png') }}" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  
 </head>
 
 <body>
@@ -90,6 +92,29 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route("heroSectionImgTrashPage")}}" class="nav-link">Trash Bin</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#reserve_section" role="button"
+                            aria-expanded="false" aria-controls="advancedUI">
+                            <i class="link-icon" data-feather="anchor"></i>
+                            <span class="link-title">Reservation Section</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="reserve_section">
+                              <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{route("clientreservationpage")}}" class="nav-link">Client Reservations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Trash Bin</a>
                                 </li>
 
                             </ul>
@@ -243,7 +268,7 @@
     <script src="{{ asset('dashboard_asset/vendors/feather-icons/feather.min.js') }}"></script>
     <script src="{{ asset('dashboard_asset/js/template.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 

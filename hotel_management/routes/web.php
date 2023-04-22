@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\heroSectionController;
+use App\Http\Controllers\reservationContoller;
 use App\Http\Controllers\roomsController;
 use App\Http\Controllers\websiteContoller;
 use Illuminate\Support\Facades\Auth;
@@ -36,6 +37,13 @@ Route::get('/', [websiteContoller::class, 'Mainwebsite'])->name('Mainwebsite');
 Route::get('allroomspage', [websiteContoller::class, 'allroomspage'])->name('allroomspage');
 
 
+//reservation
+
+Route::get('reservationpage/{id}', [reservationContoller::class, 'reservationpage'])->name('reservationpage');
+Route::post('reservationInsert', [reservationContoller::class, 'reservationInsert'])->name('reservationInsert');
+
+
+
 
 
 
@@ -67,3 +75,10 @@ Route::get("heroSectionImgParDelete/{id}", [heroSectionController::class, "heroS
 
 Route::get("addrooms",[roomsController::class,"addrooms"])->name("addrooms");
 Route::post("roomInsert",[roomsController::class,"roomInsert"])->name("roomInsert");
+
+
+//Reservation
+
+
+Route::get("clientreservationpage", [reservationContoller::class, "clientreservationpage"])->name("clientreservationpage");
+Route::post("reservationAction", [reservationContoller::class, "reservationAction"])->name("reservationAction");
