@@ -121,6 +121,29 @@
 
                         </div>
                     </li>
+                    
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#food_section" role="button"
+                            aria-expanded="false" aria-controls="advancedUI">
+                            <i class="link-icon" data-feather="anchor"></i>
+                            <span class="link-title">Food Section</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="food_section">
+                              <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{route("foodItemInsertPage")}}" class="nav-link">Add Food Item </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Trash Bin</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </li>
 
                 </ul>
             </div>
@@ -294,7 +317,50 @@
                 title: 'Add to database Successfully!!'
             })
         </script>
-    @endif
+    @endif 
+    
+    @if (session('mainFoodInsertSuccess') || session('desertFoodInsertSuccess') || session('drinksFoodInsertSuccess'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: 'Add to database Successfully!!'
+            })
+        </script>
+    @endif 
+    
+    
+    {{-- @if (session('desertFoodInsertSuccess'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: 'Add to database Successfully!!'
+            })
+        </script>
+    @endif --}}
 
 
 

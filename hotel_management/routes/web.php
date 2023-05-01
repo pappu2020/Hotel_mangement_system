@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\foodController;
 use App\Http\Controllers\heroSectionController;
 use App\Http\Controllers\reservationContoller;
 use App\Http\Controllers\roomsController;
@@ -35,6 +36,7 @@ Route::get('/', [websiteContoller::class, 'Mainwebsite'])->name('Mainwebsite');
 
 
 Route::get('allroomspage', [websiteContoller::class, 'allroomspage'])->name('allroomspage');
+Route::post('checkAvabilityForm', [websiteContoller::class, 'checkAvabilityForm'])->name('checkAvabilityForm');
 
 
 //reservation
@@ -82,3 +84,11 @@ Route::post("roomInsert",[roomsController::class,"roomInsert"])->name("roomInser
 
 Route::get("clientreservationpage", [reservationContoller::class, "clientreservationpage"])->name("clientreservationpage");
 Route::post("reservationAction", [reservationContoller::class, "reservationAction"])->name("reservationAction");
+
+
+//Food Section
+
+Route::get("foodItemInsertPage", [foodController::class, "foodItemInsertPage"])->name("foodItemInsertPage");
+Route::post("insertMainFood", [foodController::class, "insertMainFood"])->name("insertMainFood");
+Route::post("insertDesertFood", [foodController::class, "insertDesertFood"])->name("insertDesertFood");
+Route::post("insertdrinksFood", [foodController::class, "insertdrinksFood"])->name("insertdrinksFood");

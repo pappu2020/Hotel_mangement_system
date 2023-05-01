@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sogo Hotel by Colorlib.com</title>
+    <title>Relax Hotel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -32,7 +32,7 @@
     <header class="site-header js-site-header">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html">Sogo Hotel</a></div>
+                <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="{{route("Mainwebsite")}}">Relax Hotel</a></div>
                 <div class="col-6 col-lg-8">
 
 
@@ -91,13 +91,12 @@
                 <div class="col-md-3 mb-5 pr-md-5 contact-info">
                     <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
                     <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span>
-                        <span> 198 West
-                            21th Street, <br> Suite 721 New York NY 10016</span></p>
+                        <span> Road 17, Block C <br> House 38, Kolatuli, Cox'sbazar, Bangladesh</span></p>
                     <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span>
-                        <span> (+1) 435 3533</span>
+                        <span> 012121212122</span>
                     </p>
                     <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span>
-                        <span> info@domain.com</span>
+                        <span> info@RelaxHotel.com</span>
                     </p>
                 </div>
                 <div class="col-md-3 mb-5">
@@ -117,7 +116,7 @@
                     <script>
                         document.write(new Date().getFullYear());
                     </script> All rights reserved | This template is made with <i class="icon-heart-o"
-                        aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib || Backend Developed by Pappu Saha</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
 
